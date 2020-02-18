@@ -25,7 +25,7 @@ class UserRecycledViewAdapter(private val mValue: List<User>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: UserRecycledViewAdapter.viewHolder, position: Int) {
         val item = mValue[position]
-        holder.textView.text = "Title: " + item.nombre + ' ' + item.apellido
+        holder.textView.text = "Name: " + item.titulo + ' ' + item.nombre + ' ' + item.apellido
         holder.email_textView.text = "Email: " + item.email
         holder.phone_textView.text = "Phone: " + item.telefono
     }
