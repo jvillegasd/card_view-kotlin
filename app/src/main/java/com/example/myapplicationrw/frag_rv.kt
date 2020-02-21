@@ -74,7 +74,7 @@ class frag_rv : Fragment(), UserRecycledViewAdapter.onListInteractions {
     }
 
     override fun onListButtonInteraction(item: User?) {
-        val bundle = bundleOf("nombre" to item!!.nombre)
+        val bundle = bundleOf("data" to item,"nombre" to item!!.nombre)
         navController!!.navigate(R.id.action_frag_rv_to_showInfo, bundle)
         println("click " + item!!.nombre)
     }
