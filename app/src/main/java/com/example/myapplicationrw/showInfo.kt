@@ -24,7 +24,9 @@ class showInfo : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_show_info, container, false)
+        binder = DataBindingUtil.inflate(inflater, R.layout.fragment_show_info, container, false)
+        //return inflater.inflate(R.layout.fragment_show_info, container, false)
+        return binder.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -35,7 +37,7 @@ class showInfo : Fragment() {
         view.findViewById<TextView>(R.id.lastn_tv).text = "Email: " + user.email
         view.findViewById<TextView>(R.id.textView2).text = "Phone: " + user.telefono*/
 
-        binder = DataBindingUtil.setContentView(this.requireActivity(), R.layout.fragment_show_info)
+        //binder = DataBindingUtil.setContentView(this.requireActivity(), R.layout.fragment_show_info)
         binder.user = user
     }
 

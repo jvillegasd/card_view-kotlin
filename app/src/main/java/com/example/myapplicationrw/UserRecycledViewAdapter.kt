@@ -50,4 +50,8 @@ class UserRecycledViewAdapter(private val mValue: List<User>, private val mListe
 
         fun onListButtonInteraction(item: User?)
     }
+
+    public fun updateData() {
+        notifyDataSetChanged()
+    }
 }
